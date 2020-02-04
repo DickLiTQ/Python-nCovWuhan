@@ -137,7 +137,7 @@ Data preview:
 # -*- coding: utf-8 -*-
 """
 Title:  nCov2019 Virus Data Crawler
-Author: DickLi
+Author: DickLiTQ
 Latest Update:   Feb 3, 2020
 Method: Get (api)
 
