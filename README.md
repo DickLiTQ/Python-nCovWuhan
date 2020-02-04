@@ -110,7 +110,7 @@ get_AreaData('广东省', 1)
 
 ```
 Processing ... url = https://lab.isaaclin.cn/nCoV/api/area?latest=1&province=广东省
-------------S------Success!------------------
+------------------Success!------------------
 Time: 20200203 23_28_54
 Filename: nCov2019_广东省_20200203 23_28_54.xlsx
 Variables: Index(['cityName', 'confirmedCount', 'suspectedCount', 'curedCount',
@@ -251,7 +251,7 @@ def get_AreaData(area, latest):
     date_time = date_time.replace("-","").replace(":","_")
     dataframe.to_excel("nCov2019_%s_%s.xlsx"%(area, date_time))
     print(
-"""------------S------Success!------------------
+"""------------------Success!------------------
 Time: %s
 Filename: nCov2019_%s_%s.xlsx
 Variables: %s
