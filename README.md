@@ -18,13 +18,18 @@
    2. get_AreaName(abroad)
    3. get_AreaData(area, latest)
 
-### 使用Package
+### 依赖的Package
 ```python
 import requests
 import pandas as pd
 import json
 import datetime
 ```
+
+### 使用方法
+1. 打开Python 3.7的Console并设置路径
+2. 运行nCov2019_crawler.py
+3. 按照下方说明使用对应函数
 
 ### get_overall(latest)
 - 使用下方API接口获取全国的统计量及病毒描述，返回数据类型为```pd.DataFrame```.
@@ -35,12 +40,15 @@ import datetime
   2. 返回全部的全国统计量及病毒描述，并存储到xlsx. (latest = 0)
   
 - 举例：
+
 *Input:*
+
 ```python
 get_overall(1)
 ```
 
 *Output:*
+
 ```python
 Processing: Latest information ... 
 ------------------Success!------------------
@@ -68,12 +76,15 @@ Data preview:
   3. 输出当前发现有感染者的国家和地区. (abroad = 2)
 
 - 举例:
+
 *Input:*
+
 ```python
 get_AreaName(1)
 ```
 
 *Output:*
+
 ```python
 Regions abroad (26 in Total):  ['俄罗斯', '加拿大', '印度', '尼泊尔', '待明确地区', '德国', '意大利', '斯里兰卡', '新加坡', '日本', '柬埔寨', '法国', '泰国', '澳大利亚', '瑞典', '美国', '芬兰', '英国', '菲律宾', '蒙古', '西班牙', '越南', '阿联酋', '陕西省', '韩国', '马来西亚']
 ```
@@ -82,19 +93,21 @@ Regions abroad (26 in Total):  ['俄罗斯', '加拿大', '印度', '尼泊尔',
 - 使用下方API接口获取给定区域的详细数据，返回数据类型为```pd.DataFrame```.
 > https://lab.isaaclin.cn/nCoV/api/area
 
-- 功能:
+- 功能 (*会自动在当前目录创建excel文件存储数据*):
   1. 当latest = 0时返回所有历史数据，当latest = 1时返回最新更新的数据.
   2. 当area = '具体区域'时返回该区域的详细数据，建议结合```get_AreaName(abroad)```使用.
   3. 当area = 'all'时返回当前有数据记录的区域的详细数据.
-  *会自动在当前目录创建excel文件存储数据*
 
 - 举例:
+
 *Input:*
+
 ```python
 get_AreaData('广东省', 1)
 ```
 
 *Output:*
+
 ```python
 Processing ... url = https://lab.isaaclin.cn/nCoV/api/area?latest=1&province=广东省
 ------------S------Success!------------------
