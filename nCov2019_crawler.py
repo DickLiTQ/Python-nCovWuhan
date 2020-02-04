@@ -115,7 +115,7 @@ def get_AreaData(area, latest):
     date_time = date_time.replace("-","").replace(":","_")
     dataframe.to_excel("nCov2019_%s_%s.xlsx"%(area, date_time))
     print(
-"""------------S------Success!------------------
+"""------------------Success!------------------
 Time: %s
 Filename: nCov2019_%s_%s.xlsx
 Variables: %s
