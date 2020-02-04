@@ -49,7 +49,7 @@ get_overall(1)
 
 *Output:*
 
-```python
+```
 Processing: Latest information ... 
 ------------------Success!------------------
 Time: 20200203 23_18_36
@@ -108,7 +108,7 @@ get_AreaData('广东省', 1)
 
 *Output:*
 
-```python
+```
 Processing ... url = https://lab.isaaclin.cn/nCoV/api/area?latest=1&province=广东省
 ------------S------Success!------------------
 Time: 20200203 23_28_54
